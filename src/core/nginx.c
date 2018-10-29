@@ -1112,7 +1112,7 @@ ngx_core_module_init_conf(ngx_cycle_t *cycle, void *conf)
     ngx_conf_init_msec_value(ccf->timer_resolution, 0);
     ngx_conf_init_msec_value(ccf->shutdown_timeout, 0);
 
-    ngxnit_value(ccf->worker_processes, 1);
+    ngx_conf_init_value(ccf->worker_processes, 1);
     ngx_conf_init_value(ccf->debug_points, 0);
 
 #if (NGX_HAVE_CPU_AFFINITY)
